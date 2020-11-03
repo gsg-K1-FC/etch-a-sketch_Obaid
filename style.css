@@ -1,0 +1,46 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+#root {
+  margin: 10px auto;
+  width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 0px solid rgb(214, 27, 231);
+}
+
+#butDiv {
+  margin: 10px auto;
+  width: 960px;
+  height: 30px;
+}
+#newGridBut {
+  padding: 6px;
+  margin: 9px 0px;
+}
+
+.divElement {
+  border: 1px solid rgb(245, 245, 167);
+  box-sizing: border-box;
+}
+
+.hoverClass {
+  background-color: darkcyan;
+}
+
+.radioBtns {
+  float: right;
+}
+
+.radioBtns input {
+  margin: 15px;
+}
+
+#clrSelected {
+  width: 12px;
+  height: 12px;
+  border: 1px solid rgb(119, 115, 115);
+  display: inline-block;
+}
