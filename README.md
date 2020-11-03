@@ -1,12 +1,12 @@
 # etch a sketch Obaid Project
 
-#WHY 
+# WHY 
 These files here are project for practising what we learned in Gaza Sky Geeks Web Programing Fundemental Course
 
-#WHAT 
+# WHAT 
 this project is to make etch a sketch so as to be able to draw on the page by moving mouse over, painting by random color/colors or by selecting a color
 
-#HOW 
+# HOW 
 the user can paint by moving the mose.
 the user can select by which color to paint.
 or he can paint by random colors.
