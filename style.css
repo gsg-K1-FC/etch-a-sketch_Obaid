@@ -21,6 +21,10 @@
   margin: 9px 0px;
 }
 
+#clearBut {
+  padding: 6px;
+  margin: 9px 0px;
+}
 .divElement {
   border: 1px solid rgb(245, 245, 167);
   box-sizing: border-box;
@@ -43,4 +47,25 @@
   height: 12px;
   border: 1px solid rgb(119, 115, 115);
   display: inline-block;
+}
+
+input.chk-btn {
+  display: none;
+}
+
+input.chk-btn + label {
+  border: 1px solid rgb(161, 161, 161);
+  background: #efefef;
+  padding: 6px;
+  margin: 9px 0px;
+  cursor: pointer;
+  display: inline-block;
+}
+/*input.chk-btn:not(:checked) + label:hover {
+  box-shadow: 0px 1px 3px;
+}*/
+input.chk-btn + label:active,
+input.chk-btn:checked + label {
+  box-shadow: 0px 0px 3px inset;
+  background: rgb(172, 189, 245);
 }
