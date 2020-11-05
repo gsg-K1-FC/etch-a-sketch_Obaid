@@ -94,7 +94,7 @@ document.getElementById("newGridBut").addEventListener("click", function () {
 
 clr.addEventListener("click", function () {
   //listener for color picker button
-  radioB3RandColor.checked = true;
+  radioB3PickColor.checked = true;
 });
 
 radioB2RandColor.addEventListener("click", function () {
