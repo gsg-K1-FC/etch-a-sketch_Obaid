@@ -41,12 +41,13 @@ function rgbToHex(a) {
 function drawGrid(grdSize) {
   //draw grid function
   rootDiv.innerHTML = "";
+  let divSize = ((960 / grdSize) * 100) / 960 + "%";
 
   for (let i = 0; i < grdSize * grdSize; i++) {
     let divEl = document.createElement("div");
     divEl.setAttribute("class", "divElement");
-    divEl.style.width = ((960 / grdSize) * 100) / 960 + "%";
-    //divEl.style.height = ((960 / grdSize / 1.8) * 100) / 960 + "%";
+    divEl.style.width = divSize;
+
     keypressed = true;
     divEl.addEventListener("mouseover", function (e) {
       if (keypressed == true) {
@@ -85,8 +86,13 @@ document.getElementById("newGridBut").addEventListener("click", function () {
   let validNumber = false,
     newGridSize = 0;
   do {
-    newGridSize = Number(prompt("What size of the grid you want ?", 16));
-    if (isNaN(newGridSize)) {
+    newGridSize = prompt("What size of the grid you want ?", 16);
+
+    if (
+      isNaN(newGridSize) ||
+      newGridSize.toString().trim() == "" ||
+      newGridSize == 0
+    ) {
       alert("Enter valid number");
     } else {
       validNumber = true;

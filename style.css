@@ -89,9 +89,7 @@ input.chk-btn + label {
   display: inline-block;
   font-size: 15px;
 }
-/*input.chk-btn:not(:checked) + label:hover {
-  box-shadow: 0px 1px 3px;
-}*/
+
 input.chk-btn + label:active,
 input.chk-btn:checked + label {
   box-shadow: 0px 0px 3px inset;
