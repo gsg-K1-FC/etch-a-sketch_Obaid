@@ -5,9 +5,10 @@
 
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(224, 236, 154);
 }
 #mainContainer {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   width: 80%;
   height: 100%;
   margin: 0px auto;
@@ -19,7 +20,7 @@ body {
   height: 460px;
   display: flex;
   flex-wrap: wrap;
-  border: 0px solid rgb(214, 27, 231);
+  border: 1px solid rgb(182, 217, 223);
 }
 
 #headerDiv {
@@ -27,7 +28,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: burlywood;
+  background-color: rgb(46, 121, 156);
 }
 #newGridBut {
   padding: 6px 23px;
@@ -88,6 +89,7 @@ input.chk-btn + label {
   margin-top: 4px;
   display: inline-block;
   font-size: 15px;
+  color: black;
 }
 
 input.chk-btn + label:active,
@@ -100,6 +102,7 @@ input.chk-btn:checked + label {
   margin: 6px auto;
   width: 300px;
   height: 30;
+  color: white;
 }
 #together {
   display: inline-block;
