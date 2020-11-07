@@ -5,7 +5,8 @@ let radioB1RandColors = document.getElementById("radioBut1RandomColors");
 let radioB2RandColor = document.getElementById("radioBut2RandomColor");
 let radioB3PickColor = document.getElementById("radioBut3PickColor");
 let randClr = "",
-  erase = false;
+  erase = false,
+  keypressed = false;
 let clrS = document.getElementById("clrSelected");
 let makeBl = document.getElementById("makeBlack");
 
@@ -40,35 +41,39 @@ function rgbToHex(a) {
 function drawGrid(grdSize) {
   //draw grid function
   rootDiv.innerHTML = "";
+
   for (let i = 0; i < grdSize * grdSize; i++) {
     let divEl = document.createElement("div");
     divEl.setAttribute("class", "divElement");
-    divEl.style.width = 960 / grdSize + "px";
-    divEl.style.height = 960 / grdSize / 1.8 + "px";
-
+    divEl.style.width = ((960 / grdSize) * 100) / 960 + "%";
+    //divEl.style.height = ((960 / grdSize / 1.8) * 100) / 960 + "%";
+    keypressed = true;
     divEl.addEventListener("mouseover", function (e) {
-      if (erase == true) {
-        e.target.style.backgroundColor = "";
-      } else {
-        if (makeBl.checked == true && e.target.style.backgroundColor) {
-          let prevClr = e.target.style.backgroundColor;
-          let hexClr = rgbToHex(prevClr);
-          e.target.style.backgroundColor = darkenColor(hexClr, -20);
+      if (keypressed == true) {
+        if (erase == true) {
+          e.target.style.backgroundColor = "";
         } else {
-          if (radioB1RandColors.checked) {
-            //random colors
-            divEl.style.backgroundColor =
-              "#" + Math.random().toString(16).substr(-6);
-          } else if (radioB2RandColor.checked) {
-            //random color
-            divEl.style.backgroundColor = randClr;
-          } else if (radioB3PickColor.checked) {
-            //picked color
-            divEl.style.backgroundColor = clr.value;
+          if (makeBl.checked == true && e.target.style.backgroundColor) {
+            let prevClr = e.target.style.backgroundColor;
+            let hexClr = rgbToHex(prevClr);
+            e.target.style.backgroundColor = darkenColor(hexClr, -20);
+          } else {
+            if (radioB1RandColors.checked) {
+              //random colors
+              divEl.style.backgroundColor =
+                "#" + Math.random().toString(16).substr(-6);
+            } else if (radioB2RandColor.checked) {
+              //random color
+              divEl.style.backgroundColor = randClr;
+            } else if (radioB3PickColor.checked) {
+              //picked color
+              divEl.style.backgroundColor = clr.value;
+            }
           }
         }
-      }
-    });
+      } //if end
+    }); //event listern for div elements ends
+
     rootDiv.appendChild(divEl);
   } //end for
 }
