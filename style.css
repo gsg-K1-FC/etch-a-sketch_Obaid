@@ -4,37 +4,48 @@
 }
 
 body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(224, 236, 154);
 }
 #mainContainer {
-  background-color: white;
-  width: 960px;
+  background-color: rgb(255, 255, 255);
+  width: 80%;
+  height: 100%;
   margin: 0px auto;
-  padding: 20px;
+  padding: 0px 20px;
 }
 #root {
   margin: 10px auto;
-  width: 960px;
+  width: 100%;
+  height: 460px;
   display: flex;
   flex-wrap: wrap;
-  border: 0px solid rgb(214, 27, 231);
+  border: 1px solid rgb(182, 217, 223);
 }
 
 #headerDiv {
-  margin: 10px auto;
-  width: 960px;
+  margin: 6px auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(46, 121, 156);
 }
 #newGridBut {
-  padding: 6px;
-  margin: 9px 0px;
+  padding: 6px 23px;
+  margin: 0px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 #clearBut {
   padding: 6px;
-  margin: 9px 0px;
+  margin: 0px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .divElement {
   border: 1px solid rgb(245, 245, 167);
   box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
 .hoverClass {
@@ -42,11 +53,17 @@ body {
 }
 
 .radioBtns {
-  float: right;
+  width: 220px;
+  height: 80px;
 }
-
+#BtnsDiv {
+  padding-top: 14px;
+  margin-left: 6px;
+  height: 100px;
+  width: 120px;
+}
 .radioBtns input {
-  margin: 15px;
+  margin-top: 0px;
 }
 
 #clrSelected {
@@ -60,28 +77,105 @@ input.chk-btn {
   display: none;
 }
 
-input.chk-btn + label {
-  border: 1px solid rgb(161, 161, 161);
-  background: #efefef;
+#clearBut {
   padding: 6px;
-  margin: 9px 0px;
-  cursor: pointer;
-  display: inline-block;
+  margin-top: 4px;
 }
-/*input.chk-btn:not(:checked) + label:hover {
-  box-shadow: 0px 1px 3px;
-}*/
+
+input.chk-btn + label {
+  border: 1px solid rgb(59, 59, 59);
+  background: #efefef;
+  padding: 5px;
+  margin-top: 4px;
+  display: inline-block;
+  font-size: 15px;
+  color: black;
+}
+
 input.chk-btn + label:active,
 input.chk-btn:checked + label {
   box-shadow: 0px 0px 3px inset;
   background: rgb(172, 189, 245);
 }
 
-#BtnsDiv {
-}
-
 #title {
   margin: 6px auto;
   width: 300px;
   height: 30;
+  color: white;
+}
+.together {
+  display: inline-block;
+}
+
+#title h1 {
+  margin-left: 60px;
+}
+
+#radioBut1RandomColors {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 840px) {
+  #mainContainer {
+    width: 90%;
+  }
+  #headerDiv {
+    flex-direction: column;
+  }
+  .radioBtns {
+    width: 100%;
+    order: 3;
+    height: 30px;
+    margin-bottom: 16px;
+  }
+  #BtnsDiv {
+    order: 2;
+    width: 100%;
+    height: 30px;
+    padding: 4px;
+  }
+  #title {
+    order: 1;
+    height: 20px;
+  }
+  #break {
+    display: none;
+  }
+  .spaces {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .radioBtns {
+    height: 65px;
+  }
+
+  #root {
+    height: 420px;
+  }
+
+  #headerDiv {
+    height: 165px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .radioBtns {
+    height: 80px;
+  }
+
+  #root {
+    height: 320px;
+  }
+  #BtnsDiv {
+    height: 40px;
+  }
+  #headerDiv {
+    height: 220px;
+  }
+  #title h1 {
+    margin-left: 6px;
+  }
 }
