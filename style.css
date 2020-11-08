@@ -104,7 +104,7 @@ input.chk-btn:checked + label {
   height: 30;
   color: white;
 }
-#together {
+.together {
   display: inline-block;
 }
 

@@ -7,29 +7,60 @@
     <title>Etch a sketch</title>
   </head>
   <body>
-  
     <div id="mainContainer">
-  <div id="headerDiv">
-    <div id="BtnsDiv"><button id="newGridBut">New Grid</button>
-       <button id="clearBut">Clear</button> 
-   
-      <input type="checkbox" id='erase' class='chk-btn' />
-  <label for='erase'>Erase</label>
-  <br id="break"/><div id="together">
-  <input type="checkbox" id="makeBlack" ><label for="makeBlack"> Darken colors</label></input></div>
-  </div>
-<div id="title"><h1>Etch A Sketch</h1></div>
-    <div class="radioBtns">
-       <br> &nbsp;&nbsp;&nbsp;  <strong>Mode: </strong> &nbsp;&nbsp; 
-    <input type="radio" name="mode" id="radioBut1RandomColors" value="randomClrs" checked="checked"><label for="radioBut1RandomColors">&nbsp;Random Colors</label> </input>
-    <span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<div id="together"><input type="radio" name="mode" id="radioBut2RandomColor" value="randomClr"><label for="radioBut2RandomColor">&nbsp;Random Color</label>  <div id="clrSelected"></div></input></div>
-    <span class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;<div id="together"><input type="radio" name="mode" id="radioBut3PickColor" value="pikClr"><label for="radioBut3PickColor">&nbsp;Pick Color</label></input>&nbsp;<input type="color" id="clr"></input></div>
-  </div>
- 
-  </div>
-    <div id="root"></div>
+      <div id="headerDiv">
+        <div id="BtnsDiv">
+          <button id="newGridBut">New Grid</button>
+          <button id="clearBut">Clear</button>
+
+          <input type="checkbox" id="erase" class="chk-btn" />
+          <label for="erase">Erase</label>
+          <br id="break" />
+          <div class="together">
+            <input type="checkbox" id="makeBlack" /><label for="makeBlack">
+              Darken colors</label
+            >
+          </div>
+        </div>
+        <div id="title"><h1>Etch A Sketch</h1></div>
+        <div class="radioBtns">
+          <br />
+          &nbsp;&nbsp;&nbsp; <strong>Mode: </strong> &nbsp;&nbsp;
+          <input
+            type="radio"
+            name="mode"
+            id="radioBut1RandomColors"
+            value="randomClrs"
+            checked="checked"
+          /><label for="radioBut1RandomColors">&nbsp;Random Colors</label>
+          <span class="spaces"
+            >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+          >&nbsp;&nbsp;&nbsp;
+          <div class="together">
+            <input
+              type="radio"
+              name="mode"
+              id="radioBut2RandomColor"
+              value="randomClr"
+            /><label for="radioBut2RandomColor">&nbsp;Random Color</label>
+            <div id="clrSelected"></div>
+          </div>
+          <span class="spaces"
+            >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+          >&nbsp;&nbsp;&nbsp;
+          <div class="together">
+            <input
+              type="radio"
+              name="mode"
+              id="radioBut3PickColor"
+              value="pikClr"
+            /><label for="radioBut3PickColor">&nbsp;Pick Color</label
+            >&nbsp;<input type="color" id="clr" />
+          </div>
+        </div>
+      </div>
+      <div id="root"></div>
     </div>
     <script src="script.js"></script>
   </body>
 </html>
-
